@@ -1,16 +1,15 @@
 const fibonacci = function(number) {
-    let nOne = 0;
-    let nTwo = 1;
-    let nThree = 1;
     if (number < 0) {
         return "OOPS";
     }
-    for (i = 0; i < number - 1; i++) {
-        nThree = nOne + nTwo;
-        nOne = nTwo;
-        nTwo = nThree;
+    let a = 0;
+    let b = 1;
+    for (i = 1; i < number; i++) {
+        let temp = b;
+        b = a + b;
+        a = temp;
     }
-    return nThree;
+    return b;
 
 };
 
